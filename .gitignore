@@ -1,0 +1,10 @@
+*.class
+*.jar
+target
+.DS_Store*
+
+# Eclipse specific files/directories
+.classpath
+.project
+.settings
+.metadata
