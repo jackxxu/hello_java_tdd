@@ -7,13 +7,13 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 public class ConcurrentExecutor {
-
-	public int sum(int i, int j) throws InterruptedException, ExecutionException {
-		ExecutorService executor = Executors.newCachedThreadPool();
-		Future<Integer> future = executor.submit( new DoMath(i, j) );
-		int val = future.get();
-		executor.shutdown();
-		return val;
-	}
-
+    
+    public int sum(int i, int j) throws InterruptedException, ExecutionException {
+        ExecutorService executor = Executors.newCachedThreadPool();
+        Future<Integer> future = executor.submit( new DoMath(i, j) );
+        int val = future.get();
+        executor.shutdown();
+        return val;
+    }
+    
 }
